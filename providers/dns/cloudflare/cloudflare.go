@@ -11,7 +11,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/xenolf/lego/acme"
+	"github.com/stangah/lego/acme"
 )
 
 // CloudFlareAPIURL represents the API endpoint to call.

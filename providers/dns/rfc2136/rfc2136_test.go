@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/miekg/dns"
-	"github.com/xenolf/lego/acme"
+	"github.com/stangah/lego/acme"
 )
 
 var (

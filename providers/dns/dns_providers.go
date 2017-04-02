@@ -4,27 +4,27 @@ package dns
 import (
 	"fmt"
 
-	"github.com/xenolf/lego/acme"
-	"github.com/xenolf/lego/providers/dns/auroradns"
-	"github.com/xenolf/lego/providers/dns/azure"
-	"github.com/xenolf/lego/providers/dns/cloudflare"
-	"github.com/xenolf/lego/providers/dns/digitalocean"
-	"github.com/xenolf/lego/providers/dns/dnsimple"
-	"github.com/xenolf/lego/providers/dns/dnsmadeeasy"
-	"github.com/xenolf/lego/providers/dns/dnspod"
-	"github.com/xenolf/lego/providers/dns/dyn"
-	"github.com/xenolf/lego/providers/dns/exoscale"
-	"github.com/xenolf/lego/providers/dns/gandi"
-	"github.com/xenolf/lego/providers/dns/googlecloud"
-	"github.com/xenolf/lego/providers/dns/linode"
-	"github.com/xenolf/lego/providers/dns/namecheap"
-	"github.com/xenolf/lego/providers/dns/ns1"
-	"github.com/xenolf/lego/providers/dns/ovh"
-	"github.com/xenolf/lego/providers/dns/pdns"
-	"github.com/xenolf/lego/providers/dns/rackspace"
-	"github.com/xenolf/lego/providers/dns/rfc2136"
-	"github.com/xenolf/lego/providers/dns/route53"
-	"github.com/xenolf/lego/providers/dns/vultr"
+	"github.com/stangah/lego/acme"
+	"github.com/stangah/lego/providers/dns/auroradns"
+	"github.com/stangah/lego/providers/dns/azure"
+	"github.com/stangah/lego/providers/dns/cloudflare"
+	"github.com/stangah/lego/providers/dns/digitalocean"
+	"github.com/stangah/lego/providers/dns/dnsimple"
+	"github.com/stangah/lego/providers/dns/dnsmadeeasy"
+	"github.com/stangah/lego/providers/dns/dnspod"
+	"github.com/stangah/lego/providers/dns/dyn"
+	"github.com/stangah/lego/providers/dns/exoscale"
+	"github.com/stangah/lego/providers/dns/gandi"
+	"github.com/stangah/lego/providers/dns/googlecloud"
+	"github.com/stangah/lego/providers/dns/linode"
+	"github.com/stangah/lego/providers/dns/namecheap"
+	"github.com/stangah/lego/providers/dns/ns1"
+	"github.com/stangah/lego/providers/dns/ovh"
+	"github.com/stangah/lego/providers/dns/pdns"
+	"github.com/stangah/lego/providers/dns/rackspace"
+	"github.com/stangah/lego/providers/dns/rfc2136"
+	"github.com/stangah/lego/providers/dns/route53"
+	"github.com/stangah/lego/providers/dns/vultr"
 )
 
 func NewDNSChallengeProviderByName(name string) (acme.ChallengeProvider, error) {
@@ -48,7 +48,7 @@ func NewDNSChallengeProviderByName(name string) (acme.ChallengeProvider, error) 
 	case "dyn":
 		provider, err = dyn.NewDNSProvider()
 	case "exoscale":
-		provider, err = exoscale.NewDNSProvider()		
+		provider, err = exoscale.NewDNSProvider()
 	case "gandi":
 		provider, err = gandi.NewDNSProvider()
 	case "gcloud":

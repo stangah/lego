@@ -33,7 +33,7 @@
 - lib: TLS-SNI-01 now supports custom solvers using the `ChallengeProvider` interface.
 - lib: The `GetPrivateKey` function in the `acme.User` interface is now expected to return a `crypto.PrivateKey` instead of an `rsa.PrivateKey` for EC compat.
 - lib: The `acme.NewClient` function now expects an `acme.KeyType` instead of the keyBits parameter.
- 
+
 ### Removed
 - CLI: The `rsa-key-size` switch was removed in favor of `key-type` to support EC keys.
 
@@ -87,8 +87,8 @@
 ## [0.1.0] - 2015-12-03
 - Initial release
 
-[0.3.1]: https://github.com/xenolf/lego/compare/v0.3.0...v0.3.1
-[0.3.0]: https://github.com/xenolf/lego/compare/v0.2.0...v0.3.0
-[0.2.0]: https://github.com/xenolf/lego/compare/v0.1.1...v0.2.0
-[0.1.1]: https://github.com/xenolf/lego/compare/v0.1.0...v0.1.1
-[0.1.0]: https://github.com/xenolf/lego/tree/v0.1.0
+[0.3.1]: https://github.com/stangah/lego/compare/v0.3.0...v0.3.1
+[0.3.0]: https://github.com/stangah/lego/compare/v0.2.0...v0.3.0
+[0.2.0]: https://github.com/stangah/lego/compare/v0.1.1...v0.2.0
+[0.1.1]: https://github.com/stangah/lego/compare/v0.1.0...v0.1.1
+[0.1.0]: https://github.com/stangah/lego/tree/v0.1.0

@@ -5,7 +5,7 @@ import (
 	"github.com/edeckers/auroradnsclient"
 	"github.com/edeckers/auroradnsclient/records"
 	"github.com/edeckers/auroradnsclient/zones"
-	"github.com/xenolf/lego/acme"
+	"github.com/stangah/lego/acme"
 	"os"
 	"sync"
 )

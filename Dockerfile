@@ -4,8 +4,8 @@ ENV GOPATH /go
 
 RUN apk update && apk add ca-certificates go git && \
     rm -rf /var/cache/apk/* && \
-    go get -u github.com/xenolf/lego && \
-    cd /go/src/github.com/xenolf/lego && \
+    go get -u github.com/stangah/lego && \
+    cd /go/src/github.com/stangah/lego && \
     go build -o /usr/bin/lego . && \
     apk del go git && \
     rm -rf /var/cache/apk/* && \

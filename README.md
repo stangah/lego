@@ -1,9 +1,9 @@
 # lego
 Let's Encrypt client and ACME library written in Go
 
-[![GoDoc](https://godoc.org/github.com/xenolf/lego/acme?status.svg)](https://godoc.org/github.com/xenolf/lego/acme)
-[![Build Status](https://travis-ci.org/xenolf/lego.svg?branch=master)](https://travis-ci.org/xenolf/lego)
-[![Dev Chat](https://img.shields.io/badge/dev%20chat-gitter-blue.svg?label=dev+chat)](https://gitter.im/xenolf/lego)
+[![GoDoc](https://godoc.org/github.com/stangah/lego/acme?status.svg)](https://godoc.org/github.com/stangah/lego/acme)
+[![Build Status](https://travis-ci.org/stangah/lego.svg?branch=master)](https://travis-ci.org/stangah/lego)
+[![Dev Chat](https://img.shields.io/badge/dev%20chat-gitter-blue.svg?label=dev+chat)](https://gitter.im/stangah/lego)
 
 #### General
 This is a work in progress. Please do *NOT* run this on a production server and please report any bugs you find!
@@ -11,12 +11,12 @@ This is a work in progress. Please do *NOT* run this on a production server and 
 #### Installation
 lego supports both binary installs and install from source.
 
-To get the binary just download the latest release for your OS/Arch from [the release page](https://github.com/xenolf/lego/releases)
+To get the binary just download the latest release for your OS/Arch from [the release page](https://github.com/stangah/lego/releases)
 and put the binary somewhere convenient. lego does not assume anything about the location you run it from.
 
-To install from source, just run 
+To install from source, just run
 ```
-go get -u github.com/xenolf/lego
+go get -u github.com/stangah/lego
 ```
 
 To build lego inside a Docker container, just run
@@ -39,8 +39,8 @@ yaourt -S lego-git
   - TLS with Server Name Indication (tls-sni-01)
   - DNS (dns-01)
 - SAN certificate support
-- Comes with multiple optional [DNS providers](https://github.com/xenolf/lego/tree/master/providers/dns)
-- [Custom challenge solvers](https://github.com/xenolf/lego/wiki/Writing-a-Challenge-Solver)
+- Comes with multiple optional [DNS providers](https://github.com/stangah/lego/tree/master/providers/dns)
+- [Custom challenge solvers](https://github.com/stangah/lego/wiki/Writing-a-Challenge-Solver)
 - Certificate bundling
 - OCSP helper function
 
@@ -49,7 +49,7 @@ Please keep in mind that CLI switches and APIs are still subject to change.
 When using the standard `--path` option, all certificates and account configurations are saved to a folder *.lego* in the current working directory.
 
 #### Sudo
-The CLI does not require root permissions but needs to bind to port 80 and 443 for certain challenges. 
+The CLI does not require root permissions but needs to bind to port 80 and 443 for certain challenges.
 To run the CLI without sudo, you have four options:
 
 - Use setcap 'cap_net_bind_service=+ep' /path/to/program
@@ -80,17 +80,17 @@ NAME:
 
 USAGE:
    lego [global options] command [command options] [arguments...]
-   
+
 VERSION:
    0.3.1
-   
+
 COMMANDS:
    run		Register an account, then create and install a certificate
    revoke	Revoke a certificate
    renew	Renew a certificate
    dnshelp	Shows additional help for the --dns global option
    help, h	Shows a list of commands or help for one command
-   
+
 GLOBAL OPTIONS:
    --domains, -d [--domains option --domains option]			Add domains to the process
    --csr, -c                Certificate signing request filename, if an external CSR is to be used
@@ -110,7 +110,7 @@ GLOBAL OPTIONS:
 
 ##### CLI Example
 
-Assumes the `lego` binary has permission to bind to ports 80 and 443. You can get a pre-built binary from the [releases](https://github.com/xenolf/lego/releases) page.
+Assumes the `lego` binary has permission to bind to ports 80 and 443. You can get a pre-built binary from the [releases](https://github.com/stangah/lego/releases) page.
 If your environment does not allow you to bind to these ports, please read [Port Usage](#port-usage).
 
 Obtain a certificate:
@@ -223,7 +223,7 @@ if err != nil {
 }
 
 // We specify an http port of 5002 and an tls port of 5001 on all interfaces
-// because we aren't running as root and can't bind a listener to port 80 and 443 
+// because we aren't running as root and can't bind a listener to port 80 and 443
 // (used later when we attempt to pass challenges). Keep in mind that we still
 // need to proxy challenge traffic to port 5002 and 5001.
 client.SetHTTPAddress(":5002")

@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/xenolf/lego/acme"
+	"github.com/stangah/lego/acme"
 )
 
 var dynBaseURL = "https://api.dynect.net/REST"
